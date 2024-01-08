@@ -8,7 +8,7 @@ header{
   height:96px;
   z-index:9999;
 }
-.h_top{height:60px;}
+.h_top{height:60px;} 
 header h1{
   width:100px;
   margin:0 auto;
@@ -47,6 +47,7 @@ header h1 img{
   text-align:center;
   font-weight:bold;
 }
+.gnb1 > li:first-child{display:none;}
 
 /* 토글 클릭시 나오는 gnb메뉴 서식 */
 .gnb2{
@@ -106,12 +107,6 @@ header h1 img{
 /* toggle 클릭시 .gnb2 */
 #toggle:checked ~ header > .h_bottom > .gnb2{left:0%;}
 
-/* gnb2에서 radio 버튼 클릭시 .sub */
-#sub_list01:checked + li > .sub{display:block;}
-#sub_list02:checked + li > .sub{display:block;}
-#sub_list03:checked + li > .sub{display:block;}
-#sub_list04:checked + li > .sub{display:block;}
-
 /* 검색폼 */
 .search_box_wrap{
   width:100%; height:100%;
@@ -167,6 +162,7 @@ fieldset > label.fa-search{
   padding:10px;
 }
 
+/* 검색버튼 클릭시 검색화면 노출 */
 #search:checked + header > .h_top > .search_box_wrap{
   right:0%;
 }
@@ -192,15 +188,15 @@ fieldset > label.fa-search{
   overflow:hidden;
   position:relative;
 }
-.slide > li > a > img{
-  width:100%;
-  transform:scale(3.6) translateY(32px);
+.slide > li > a > img{width:100%;}
+.slide > li:first-child > a > img{
+  transform:scale(3.65) translateY(34px);
 }
 .slide > li:nth-child(2) > a > img{
-  transform:scale(3.4) translate(-40px, 32px);
+  transform:scale(3.65) translate(-40px, 34px);
 }
 .slide > li:last-child > a > img{
-  transform:scale(3.8) translate(-62px, 25px);
+  transform:scale(3.65) translate(-58px, 34px);
 }
 .slide > li:nth-child(2) div{
   width:300px; 
@@ -216,10 +212,9 @@ fieldset > label.fa-search{
   width:100px;
 }
 
-
 /* 좌, 우 버튼 */
 #l_btn, #r_btn{
-  font-size:1.2rem;
+  font-size:1.5rem;
   padding:10px 4px;
   position:absolute; top:44%;
 }
@@ -233,6 +228,143 @@ fieldset > label.fa-search{
 .best > input, .event > input, .new > input{
   position:absolute;
   right:10%;top:30px;
+}
+
+@media screen and (min-width:380px) and (max-width:400px) {
+  /* 첫번째 메인 슬라이드 서식 */
+  /* .slide{height:} */
+  .slide > li:last-child > a > img{
+    transform:scale(3.65) translate(-62px, 34px);
+  }
+}
+
+@media screen and (min-width:401px) and (max-width:420px) {
+  /* 첫번째 메인 슬라이드 서식 */
+  .slide{height:380px;}
+  .slide > li:first-child > a > img{
+    transform:scale(3.65) translateY(38px);
+  }
+  .slide > li:nth-child(2) > a > img{
+    transform:scale(3.65) translate(-40px, 38px);
+  }
+  .slide > li:last-child > a > img{
+    transform:scale(3.65) translate(-64px, 38px);
+  }
+}
+
+@media screen and (min-width:421px) and (max-width:450px) {
+  /* 첫번째 메인 슬라이드 서식 */
+  .slide{height:400px;}
+  .slide > li:first-child > a > img{
+    transform:scale(3.6) translateY(40px);
+  }
+  .slide > li:nth-child(2) > a > img{
+    transform:scale(3.6) translate(-40px, 40px);
+  }
+  .slide > li:last-child > a > img{
+    transform:scale(3.6) translate(-68px, 40px);
+  }
+}
+
+@media screen and (min-width:451px) and (max-width:480px) {
+  /* 첫번째 메인 슬라이드 서식 */
+  .slide{height:420px;}
+  .slide > li:first-child > a > img{
+    transform:scale(3.55) translateY(42px);
+  }
+  .slide > li:nth-child(2) > a > img{
+    transform:scale(3.55) translate(-40px, 42px);
+  }
+  .slide > li:last-child > a > img{
+    transform:scale(3.55) translate(-73px, 42px);
+  }
+}
+
+@media screen and (min-width:481px) and (max-width:510px) {
+  /* 첫번째 메인 슬라이드 서식 */
+  .slide{height:420px;}
+  .slide > li:first-child > a > img{
+    transform:scale(3.45) translateY(40px);
+  }
+  .slide > li:nth-child(2) > a > img{
+    transform:scale(3.45) translate(-40px, 40px);
+  }
+  .slide > li:last-child > a > img{
+    transform:scale(3.45) translate(-78px, 40px);
+  }
+}
+
+@media screen and (min-width:511px) and (max-width:540px) {
+  /* 첫번째 메인 슬라이드 서식 */
+  .slide{height:440px;}
+  .slide > li:first-child > a > img{
+    transform:scale(3.35) translateY(44px);
+  }
+  .slide > li:nth-child(2) > a > img{
+    transform:scale(3.35) translate(-45px, 44px);
+  }
+  .slide > li:last-child > a > img{
+    transform:scale(3.35) translate(-80px, 44px);
+  }
+}
+
+@media screen and (min-width:541px) and (max-width:600px) {
+  /* 첫번째 메인 슬라이드 서식 */
+  .slide{height:470px;}
+  .slide > li:first-child > a > img{
+    transform:scale(3.3) translateY(50px);
+  }
+  .slide > li:nth-child(2) > a > img{
+    transform:scale(3.3) translate(-50px, 49px);
+  }
+  .slide > li:last-child > a > img{
+    transform:scale(3.3) translate(-86px, 49px);
+  }
+  #l_btn, #r_btn{
+    font-size:2rem;
+  }
+}
+
+@media screen and (min-width:601px) and (max-width:710px) {
+  /* 첫번째 메인 슬라이드 서식 */
+  .slide{height:510px;}
+  .slide > li:first-child > a > img{
+    transform:scale(3.2) translateY(55px);
+  }
+  .slide > li:nth-child(2) > a > img{
+    transform:scale(3.2) translate(-60px, 55px);
+  }
+  .slide > li:last-child > a > img{
+    transform:scale(3.2) translate(-96px, 55px);
+  }
+  .slide > li:nth-child(2) div{
+    left:70px;
+    top:70px;
+  }
+  #l_btn, #r_btn{
+    font-size:2rem;
+  }
+}
+
+@media screen and (min-width:711px) {
+  /* 첫번째 메인 슬라이드 서식 */
+  .slide{height:530px;}
+  .slide > li:first-child > a > img{
+    transform:scale(2.8) translateY(60px);
+  }
+  .slide > li:nth-child(2) > a > img{
+    transform:scale(2.8) translate(-80px, 60px);
+  }
+  .slide > li:last-child > a > img{
+    transform:scale(2.8) translate(-110px, 60px);
+  }
+  .slide > li:nth-child(2) div{
+    left:70px;
+    top:70px;
+  }
+  #l_btn, #r_btn{
+    font-size:2rem;
+  }
 }
 
 /* 두번째 best 콘텐츠 서식 */
@@ -331,8 +463,18 @@ fieldset > label.fa-search{
   line-height:25px;
 }
 
+@media screen and (min-width:527px) and (max-width:696px) {
+
+  /* 네번째 New 콘텐츠 */
+  .new_list > li{
+    padding:20px;
+  }
+  .new_list a img{
+    width:190px;
+  }
+}
+
 /* 다섯번째 Membership 콘텐츠 서식 */
-/* .membership{position:relative;} */
 .membership > h2{
   padding:50px 0px;
   text-align:center;
@@ -357,7 +499,7 @@ fieldset > label.fa-search{
 .mem_list{
   display:flex;
   justify-content:space-around;
-  padding:40px 0px;
+  padding:80px 0px 40px 0px;
 }
 .mem_list > li{
   width:100px; height:100px;
@@ -374,7 +516,7 @@ fieldset > label.fa-search{
 }
 
 /* 푸터영역 서식 */
-footer{padding-top:20px;}
+footer{padding-top:50px;}
 .f_top, address{padding:10px;}
 .f_top{
   border-top:1px solid #333;

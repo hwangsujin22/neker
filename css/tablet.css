@@ -2,6 +2,65 @@
 
 @media screen and (min-width:768px) and (max-width:1024px){
 
+  /* 헤더영역 서식 */
+  header{height:160px;}
+  header h1{
+    margin:0px;
+    padding-left:5%;
+    padding-top:26px;
+  }
+  header h1 img{
+    width:134px;
+  }
+  .h_top{
+    height:110px;
+    display:flex;
+    justify-content:space-between;
+  }
+
+  /* 모바일용 버튼 감추기 */
+  .total_btn, .search_btn, .cart_btn{display:none;}
+
+  .lnb{
+    display:flex;
+    justify-content:space-between;
+  }
+  .lnb > li{
+    padding:40px 20px 0px ;
+  }
+  .lnb > li a{
+    font-size:1rem;
+    display:block;
+    line-height:30px;
+  }
+  .search_btn2 i.fa-search{
+    font-size:30px;
+  }
+  
+
+
+  /* h_bottom영역 서식 */
+  .h_bottom{height:50px;}
+  .gnb1{
+    font-size:1.1rem;
+    line-height:300%;
+  }
+  .gnb1 > li:first-child{display:block;}
+  .gnb1 > li:first-child i.fa-bars{
+    font-size:1.5rem;
+  }
+
+
+
+  /* toggle 클릭시 .gnb2 */
+  #toggle:checked ~ header > .h_bottom > .gnb2{left:0%;}
+
+  /* 검색버튼 클릭시 검색화면 노출 */
+  #search:checked + header > .h_top > .search_box_wrap{
+    right:0%;
+  }
+
+
 
 
 
