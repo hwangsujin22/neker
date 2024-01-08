@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neker</title>
+  <!-- 1. 초기화 -->
+  <link href="./css/reset.css" rel="stylesheet" type="text/css">
+  <!-- 2. 기본 서식 -->
+  <link href="./css/base.css" rel="stylesheet" type="text/css">
+  <!-- 3. 공통 서식 header, footer -->
+  <link href="./css/common.css" rel="stylesheet" type="text/css">
+  <!-- 4. mobile(기준) 서식 -->
+  <link href="./css/mobile.css" rel="stylesheet" type="text/css">
+  <!-- 5. 테블릿 서식 -->
+  <link href="./css/tablet.css" rel="stylesheet" type="text/css">
+  <!-- 6. pc 서식 -->
+  <link href="./css/pc.css" rel="stylesheet" type="text/css">
+  <!-- 메인 슬라이드 스크립트 -->
+  <script src="./script/slide.js" defer></script>
+  <!-- 아이콘폰트 주소 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <form name="search" method="post" action="search.php">
+    <input type="checkbox" id="toggle">
+    <input type="checkbox" id="search">
+      <!-- 헤더영역시작 -->
+      <header>
+        <div class="h_top">
+          <!-- 상단로고 -->
+          <h1><a href="index.html" title="메인으로 바로가기"><img src="./images/logo_neker.png" alt="로고"></a></h1>
+        
+          <!-- 로그인, 회원가입, 검색(pc) -->
+          <nav class="lnb">
+            <li><a href="login.html" title="로그인">로그인</a></li>
+            <li><a href="join.html" title="회원가입">회원가입</a></li>
+            <li><a href="search.html" title="검색"><i class="fas fa-search"></i></a></li>
+          </nav>
+
+          <!-- 토글, 검색, 장바구니(mobile) -->
+          <label for="toggle" class="total_btn"><i class="fas fa-bars"></i></label>
+          <label for="search" class="search_btn"><i class="fas fa-search"></i></label>
+          <a href="cart.html" title="장바구니페이지바로가기" class="cart_btn"><i class="fas fa-shopping-bag"></a></i>
+
+          <div class="search_box_wrap">
+            <div class="search_box">
+              <label for="search"><i class="fas fa-arrow-left"></label></i>
+              <fieldset>
+                <input type="search" maxlength="40" id="search_b">
+                <label for="search_b" class="fas fa-search"></label>
+              </fieldset>
+            </div>
+            <div class="r_word">
+              <h3>추천검색어</h3>
+              <input type="button" value="트러블">
+              <input type="button" value="아이크림">
+              <input type="button" value="매트 립">
+              <input type="button" value="치크">
+              <input type="button" value="세럼">
+              <input type="button" value="폼클렌징">
+              <input type="button" value="립밤">
+              <input type="button" value="프리즈매틱">
+              <input type="button" value="베일레이어">
+              <input type="button" value="버블마스크">
+              <input type="button" value="안티에이징">
+              <input type="button" value="진정">
+              <input type="button" value="이벤트">
+            </div>
+            <h3>최근 검색어</h3>
+          </div>
+          
+        </div>
+
+        <div class="h_bottom">
+          <ul class="gnb1">
+            <li><a href="#" title="베스트">베스트</a></li>
+            <li><a href="#" title="신제품">신제품</a></li>
+            <li><a href="#" title="기획전">기획전</a></li>
+            <li><a href="#" title="이벤트">이벤트</a></li>
+            <li><a href="#" title="멤버십">멤버십</a></li>
+          </ul>
+          <nav class="gnb2">
+            <img src="./images/logo_neker.png" alt="메인 로고">
+            <label for="toggle" class="c_btn"><i class="fas fa-times"></i></label>
+
+            <ul>
+              <li><a href="#" title="카테고리">카테고리<i class="fas fa-angle-down"></i></a>
+                <ul class="sub">
+                  <li><a href="#" title="스킨케어">스킨케어</a></li>
+                  <li><a href="#" title="메이크업">메이크업</a></li>
+                  <li><a href="#" title="팩">팩</a></li>
+                  <li><a href="#" title="헤어, 바디">헤어, 바디</a></li>
+                  <li><a href="#" title="소품">소품</a></li>
+                  <li><a href="#" title="남성">남성</a></li>
+                </ul>
+              </li>
+
+              <li><a href="#" title="베스트">베스트<i class="fas fa-angle-down"></i></a>
+                <ul class="sub">
+                  <li><a href="#" title="스킨케어">스킨케어</a></li>
+                  <li><a href="#" title="메이크업">메이크업</a></li>
+                  <li><a href="#" title="팩">팩</a></li>
+                  <li><a href="#" title="헤어, 바디">헤어, 바디</a></li>
+                  <li><a href="#" title="소품">소품</a></li>
+                  <li><a href="#" title="남성">남성</a></li>
+                </ul>
+              </li>
+
+              <li><a href="#" title="신제품">신제품</a></li>
+
+              <li><a href="#" title="기획전">기획전<i class="fas fa-angle-down"></i></a>
+                <ul class="sub">
+                  <li><a href="#" title="스킨케어">스킨케어</a></li>
+                  <li><a href="#" title="안티에이징">안티에이징</a></li>
+                  <li><a href="#" title="올인원">올인원</a></li>
+                  <li><a href="#" title="기프트 세트">기프트 세트</a></li>
+                </ul>
+              </li>
+
+              <li><a href="#" title="이벤트">이벤트<i class="fas fa-angle-down"></i></a>
+                <ul class="sub">
+                  <li><a href="#" title="구매혜택">구매혜택</a></li>
+                  <li><a href="#" title="사은품">사은품</a></li>
+                </ul>
+              </li>
+
+              <li><a href="#" title="멤버십">멤버십</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+    <!-- 메인영역 시작 -->
+    <main>
+      <!-- 메인 슬라이드 -->
+      <article class="slide_wrapper">
+        <h2>메인 슬라이드</h2>
+        <ul class="slide">
+          <li><a href="#" title="배너1"><img src="./images/banner_slide_01.jpg" alt="배너1"></a></li>
+          <li>
+            <a href="#" title="배너2">
+              <img src="./images/banner_img.jpg" alt="배너2">
+              <div>
+                <img src="./images/logo_neker.png" alt="로고"><br>
+                당당한 나를 표현하는 메이크업,<br>
+                프리즈매틱
+              </div>
+            </a>
+          </li>
+          <li><a href="#" title="배너3"><img src="./images/event02_1200.jpg" alt="배너3"></a></li>
+        </ul>
+        <a href="#" title="이전" id="l_btn"><i class="fas fa-angle-left"></i></a>
+        <a href="#" title="다음" id="r_btn"><i class="fas fa-angle-right"></i></a>
+      </article>
+
+      <!-- 두번째 best 콘텐츠 -->
+      <section class="best">
+        <h2>Best</h2>
+        <input type="button" value="더보기">
+        <article>
+          <ul class="best_list">
+            <li>
+              <a href="#" title="베스트1위">
+                <div>
+                  <span class="no_n">1</span>
+                  <img src="./images/eyes_product_01.png" alt="프리즈매틱 컬러 아이즈">
+                </div>
+                <div class="item_info">
+                  <p>프리즈매틱 컬러 아이즈</p>
+                  <p>12,000원</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" title="베스트2위">
+                <div>
+                  <span class="no_n">2</span>
+                  <img src="./images/matte_lip.png" alt="베일레이어 매트 립">
+                </div>
+                <div class="item_info">
+                  <p>베일레이어 매트 립</p>
+                  <p class="sale_before"><s>19,000원</s></p>
+                  <p><span class="off">40%</span> 12,000원</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" title="베스트3위">
+                <div>
+                  <span class="no_n">3</span>
+                  <img src="./images/cheek.png" alt="베일레이어 치크">
+                </div>
+                <div class="item_info">
+                  <p>베일레이어 치크</p>
+                  <p class="sale_before"><s>17,000원</s></p>
+                  <p><span class="off">41%</span> 10,000원</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- 세번째 Event 콘텐츠 -->
+      <section class="event">
+        <h2>Event</h2>
+        <input type="button" value="더보기">
+        <article class="event_tab">
+          <a href="#" title="상세페이지 바로가기">
+            <img src="./images/event_tab01.jpg" alt="이벤트1" id="big_img">
+          </a>
+          <!-- 썸네일 이미지버튼 -->
+          <ul>
+            <li><img src="./images/event_tab01.jpg" alt="썸네일" class="small"></li>
+            <li><img src="./images/event_tab02.jpg" alt="썸네일" class="small"></li>
+            <li><img src="./images/event_tab03.jpg" alt="썸네일" class="small"></li>
+            <li><img src="./images/event_tab04.jpg" alt="썸네일" class="small"></li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- 네번째 New 콘텐츠 -->
+      <section class="new">
+        <h2>New</h2>
+        <input type="button" value="더보기">
+        <article>
+          <ul class="new_list">
+            <li>
+              <div>
+                <a href="#" title="톤업쿠션">
+                  <img src="./images/tonup_cusion.jpg" alt="톤업쿠션">
+                  <p>
+                    시크릿 톤업쿠션<br>
+                    <span class="price">30,000원</span>
+                  </p>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a href="#" title="아이크림">
+                  <img src="./images/eyecream.png" alt="아이크림">
+                  <p>
+                    모이스터치 아이크림<br>
+                    <span class="price">29,000원</span>
+                  </p>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a href="#" title="섀도우 팔레트">
+                  <img src="./images/shadow.png" alt="섀도우 팔레트">
+                  <p>
+                    베일레이어 섀도우 팔레트<br>
+                    <span class="price">21,000원</span>
+                  </p>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a href="#" title="비비크림">
+                  <img src="./images/bb.png" alt="비비크림">
+                  <p>
+                    [네케르 바이룰] FX 비비크림<br>
+                    <span class="price">25,000원</span>
+                  </p>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- 다섯번째 Membership 콘텐츠 -->
+      <section class="membership">
+        <h2>Membership</h2>
+        <p>네케르 멤버가 되어 혜택을 누려보세요&#x0021;</p>
+        <article>
+          <ul class="mem_list">
+            <li>
+              <i class="fas fa-leaf"></i><br>
+              Leaf 등급
+            </li>
+            <li>
+              <i class="fas fa-tree"></i><br>
+              Tree 등급
+            </li>
+            <li>
+              <i class="fas fa-crown"></i><br>
+              Crown 등급
+            </li>
+          </ul>
+        </article>
+        <input type="button" value="자세히 보기">
+      </section>
+
+      <!-- top버튼 -->
+      <div class="t_btn">
+        <a href="#" title="페이지 상단으로 올라가기">
+          <i class="fas fa-angle-up"></i>
+        </a>
+      </div>
+    </main>
+
+    <!-- 푸터영역 시작 -->
+    <footer>
+      <div class="f_top">
+        <dl>
+          <dt>고객센터</dt>
+          <dd>02-0000-0000</dd>
+          <dd>
+            운영시간 : 10:00 &#x007E; 17:00<br>
+            점심12:00 &#x007E; 13:00
+          </dd>
+          <dd>공휴일제외</dd>
+        </dl>
+        <ul class="sns">
+          <li>
+            <a href="#" title="페이스북"><i class="fab fa-facebook-square"></i></a>
+          </li>
+          <li>
+            <a href="#" title="인스타그램"><i class="fab fa-instagram"></i></a>
+          </li>
+        </ul>
+      </div>
+      <address>
+        <p>주식회사 아미코스메틱 &#x007C; 서울특별시 종로구 언주로000길 00 3층</p>
+        <p>대표자 : 000 &#x007C; 사업자등록번호 : 000-00-00000 &#x007C; 통신판매업신고 : 제0000-000-00000호</p>
+        <p>개인정보관리책임자 : 000 &#x007C; 이메일 : 0000&#x0040;naver.com</p>
+        <p>Copyright&#x24D2;네케르.All rights reserved.</p>
+      </address>
+    </footer>
+  </form>
+
+  <!-- 제이쿼리 라이브러리 연결 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      
+      let mnu = $('.gnb1 > li > a');
+
+      mnu.each(function(){ //메뉴 5개 각각 개별적으로 기능(클릭)을 삽입한다.
+        $(this).click(function(){
+
+          // 현재 선택한 a태그에 서식을 적용하고 그 외 부모의 형제 에서 a태그를 찾아 서식을 제거한다.
+          $(this).css('color', '#FF3535').parent().siblings().find('a').css('color','#333');
+          // parent(부모는 li), siblings(형제는 부모 li의 자식들)
+
+          // 새로고침 방지하여 페이지가 위로 올라가지 못하게 함.
+          return false;
+        });
+      });
+
+      // top버튼 스크롤 위치에 따라 보이기/숨기기 한다.
+      let scrollPos;
+      $(window).scroll(function(){
+        scrollPos = $(this).scrollTop();
+        // console.log(scrollTop);
+
+        if(scrollPos>=600){
+          $('.t_btn').addClass('act');
+        }else{
+          $('.t_btn').removeClass('act');
+        }
+      });
+
+      // 토글의 gnb 메인 메뉴 클릭시 서브메뉴 나오게 하기
+      const g_mu = $('.gnb2 > ul > li > a');
+
+      g_mu.click(function(){
+        $('.sub').slideUp();
+        $(this).next().slideDown();
+        $('i').removeClass('gnb_act');
+        $(this).find('i').addClass('gnb_act');
+      });
+
+    });
+
+
+
+  </script>
+</body>
+</html>

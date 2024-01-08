@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+@media screen and (min-width:768px) and (max-width:1024px){
+
+
+
+
+  /* 세번째 Event 서식 */
+  .event_tab > ul > li:last-child{display:block;}
+
+  @media screen and (min-width:881px) and (max-width:1024px) {
+    
+  }
+  
+}
