@@ -213,14 +213,22 @@ fieldset > label.fa-search{
   width:100px;
 }
 
-/* 좌, 우 버튼 */
-#l_btn, #r_btn{
-  font-size:1.5rem;
-  padding:10px 4px;
-  position:absolute; top:44%;
+/* 페이지네이션 버튼 */
+.slide_wrapper > div{
+  text-align:center;
+  position:absolute;
+  bottom:15px;left:50%;
+  transform:translateX(-50%);
 }
-#l_btn{left:0px;}
-#r_btn{right:0px;}
+.page_n{
+  display:inline-block;
+  width:15px; height:15px;
+  border-radius:50%;
+  background:#fff;
+  margin:0px 5px;
+}
+.act{background:#FFA9A9;}
+
 
 @media screen and (min-width:380px) and (max-width:400px) {
   /* 첫번째 메인 슬라이드 서식 */
@@ -312,9 +320,6 @@ fieldset > label.fa-search{
   .slide > li:last-child > a > img{
     transform:scale(3.3) translate(-86px, 49px);
   }
-  #l_btn, #r_btn{
-    font-size:2rem;
-  }
 }
 
 @media screen and (min-width:601px) and (max-width:710px) {
@@ -333,9 +338,6 @@ fieldset > label.fa-search{
     left:70px;
     top:70px;
   }
-  #l_btn, #r_btn{
-    font-size:2rem;
-  }
 }
 
 @media screen and (min-width:711px) {
@@ -353,9 +355,6 @@ fieldset > label.fa-search{
   .slide > li:nth-child(2) div{
     left:70px;
     top:70px;
-  }
-  #l_btn, #r_btn{
-    font-size:2rem;
   }
 }
 

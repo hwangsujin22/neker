@@ -1,12 +1,12 @@
 @charset "UTF-8";
 
-section{padding-top:40px;}
-article{margin-top:40px;}
-h2{font-size:1.4rem;}
-input[type="button"]{font-size:1rem;}
-.best > input, .event > input, .new > input{top:66px;}
-
 @media screen and (min-width:768px) and (max-width:1024px){
+  
+  section{padding-top:40px;}
+  article{margin-top:40px;}
+  h2{font-size:1.4rem;}
+  input[type="button"]{font-size:1rem;}
+  .best > input, .event > input, .new > input{top:66px;}
 
   /* 헤더영역 서식 시작---------------------------------------------------- */
   header{height:160px;}

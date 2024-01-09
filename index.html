@@ -161,8 +161,11 @@
           </li>
           <li><a href="#" title="배너3"><img src="./images/event02_1200.jpg" alt="배너3"></a></li>
         </ul>
-        <a href="#" title="이전" id="l_btn"><i class="fas fa-angle-left"></i></a>
-        <a href="#" title="다음" id="r_btn"><i class="fas fa-angle-right"></i></a>
+        <div>
+          <span class="page_n act">&nbsp;</span>
+          <span class="page_n">&nbsp;</span>
+          <span class="page_n">&nbsp;</span>
+        </div>
       </article>
 
       <!-- 두번째 best 콘텐츠 -->
@@ -407,6 +410,7 @@
   <script>
     $(document).ready(function(){
       
+      // gnb1 클릭시 해당 메뉴의 폰트 컬러 변경하기----------------------------------
       let mnu = $('.gnb1 > li > a');
 
       mnu.each(function(){ //메뉴 5개 각각 개별적으로 기능(클릭)을 삽입한다.
@@ -421,7 +425,7 @@
         });
       });
 
-      // top버튼 스크롤 위치에 따라 보이기/숨기기 한다.
+      // top버튼 스크롤 위치에 따라 보이기/숨기기----------------------------------
       let scrollPos;
       $(window).scroll(function(){
         scrollPos = $(this).scrollTop();
@@ -434,7 +438,7 @@
         }
       });
 
-      // 토글의 gnb 메인 메뉴 클릭시 서브메뉴 나오게 하기
+      // 토글의 gnb2 메인 메뉴 클릭시 서브메뉴 나오게 하기------------------------------
       const g_mu = $('.gnb2 > ul > li > a');
 
       g_mu.click(function(){
@@ -443,6 +447,9 @@
         $('i').removeClass('gnb_act');
         $(this).find('i').addClass('gnb_act');
       });
+
+
+
 
     });
 
