@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* 헤더 영역 서식 */
+/* 헤더 영역 서식 시작 ---------------------------------------------------- */
 input[type="checkbox"]{
   display:none;
 }
@@ -167,6 +167,7 @@ fieldset > label.fa-search{
   right:0%;
 }
 
+/* 메인 영역 서식 시작 ---------------------------------------------------- */
 /* 메인 슬라이드 서식 */
 .slide_wrapper{
   width:100%; 
@@ -220,15 +221,6 @@ fieldset > label.fa-search{
 }
 #l_btn{left:0px;}
 #r_btn{right:0px;}
-
-/* 2, 3, 4번째 콘텐츠 제목, 버튼 공통 서식 */
-.best > h2, .event > h2, .new > h2{
-  padding:30px 0px 30px 10%;
-}
-.best > input, .event > input, .new > input{
-  position:absolute;
-  right:10%;top:30px;
-}
 
 @media screen and (min-width:380px) and (max-width:400px) {
   /* 첫번째 메인 슬라이드 서식 */
@@ -382,6 +374,7 @@ fieldset > label.fa-search{
 .best_list > li{
   margin:20px 0px;
 }
+.best_list > li:last-child{display:none;}
 .best_list > li img{
   width:140px;
 }
@@ -455,6 +448,10 @@ fieldset > label.fa-search{
 .new_list > li{
   padding:5px;
 }
+.new_list > li:nth-child(5),
+.new_list > li:nth-child(6),
+.new_list > li:nth-child(7),
+.new_list > li:last-child{display:none;}
 .new_list a img{
   width:160px;
 }
@@ -514,9 +511,31 @@ fieldset > label.fa-search{
   font-size:2rem;
   padding-top:10px;
 }
+@media screen and (min-width:480px) and (max-width:690px) {
+  .mem_list > li{
+    width:150px; height:150px;
+    line-height:40px;
+  }
+  .mem_list > li > .fas{
+    font-size:2.4rem;
+    padding-top:30px;
+  }
+}
 
-/* 푸터영역 서식 */
-footer{padding-top:50px;}
+@media screen and (min-width:691px) {
+  .mem_list > li{
+    width:180px; height:180px;
+    line-height:40px;
+    font-size:1.2rem;
+  }
+  .mem_list > li > .fas{
+    font-size:2.6rem;
+    padding-top:40px;
+  }
+}
+
+/* 푸터영역 서식 시작 ---------------------------------------------------- */
+footer{margin-top:50px;}
 .f_top, address{padding:10px;}
 .f_top{
   border-top:1px solid #333;
