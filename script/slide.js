@@ -37,10 +37,15 @@ let Timer = setInterval(function(){
   mslide(count); //mslide에 count값을 넘겨서 자동으로 움직이게 한다.
 }, 3000);
 
+// 페이지네이션
+// classList.add, classList.remove 
+// const page_btn = $('.slide_wrapper div span'); //컨트롤 버튼
+// const page_qty = page_btn.length;
+// let n = 0;
 
-//---------------------------------------------------------------------------
 
-// 메인 세번째 Event 탭 콘텐츠 스크립트
+
+// 메인 세번째 Event 탭 콘텐츠 스크립트------------------------------------------------
 
 // 큰사진 변경하기 위한 변수
 let b_img = document.getElementById('big_img');

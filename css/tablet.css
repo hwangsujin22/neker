@@ -1,11 +1,14 @@
 @charset "UTF-8";
 
+@media screen and (min-width:768px) {
+  input[type="button"]{font-size:1rem;}
+  .h_bottom{height:50px;}
+}
+
 @media screen and (min-width:768px) and (max-width:1024px){
-  
   section{padding-top:40px;}
   article{margin-top:40px;}
   h2{font-size:1.4rem;}
-  input[type="button"]{font-size:1rem;}
   .best > input, .event > input, .new > input{top:66px;}
 
   /* 헤더영역 서식 시작---------------------------------------------------- */
@@ -46,7 +49,6 @@
 
 
   /* h_bottom영역 서식 */
-  .h_bottom{height:50px;}
   .gnb1{
     font-size:1.1rem;
     line-height:300%;
@@ -131,10 +133,25 @@
     width:20%;
     padding-top:1px;
   }
-  .event_tab > ul > li:last-child{display:block;}
   .event_tab > ul > li > img{
     width:100%;
   }
+  .event_tab > ul > li:last-child{display:block;}
+
+  @media screen and (min-width:801px) and (max-width:1024px) {
+    .event_tab{
+      width:80%;
+      margin:0 auto;
+      margin-top:40px;
+    }
+    .pay_event{display:flex;}
+    .pay_event li{
+      width:50%;
+      padding:0px 1%;
+    }
+
+  }
+  
 
   /* 네번째 New 서식 */
   .new_list a img{

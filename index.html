@@ -49,33 +49,34 @@
 
 
           <!-- 검색박스 -->
-          <div class="search_box_wrap">
-            <div class="search_box">
-              <label for="search"><i class="fas fa-arrow-left"></label></i>
-              <fieldset>
-                <input type="search" maxlength="40" id="search_b">
-                <label for="search_b" class="fas fa-search"></label>
-              </fieldset>
+          <div class="search_bg">
+            <div class="search_box_wrap">
+              <div class="search_box">
+                <label for="search"><i class="fas fa-arrow-left"></label></i>
+                <fieldset>
+                  <input type="search" maxlength="40" id="search_b">
+                  <label for="search_b" class="fas fa-search"></label>
+                </fieldset>
+              </div>
+              <div class="r_word">
+                <h3>추천검색어</h3>
+                <input type="button" value="트러블">
+                <input type="button" value="아이크림">
+                <input type="button" value="매트 립">
+                <input type="button" value="치크">
+                <input type="button" value="세럼">
+                <input type="button" value="폼클렌징">
+                <input type="button" value="립밤">
+                <input type="button" value="프리즈매틱">
+                <input type="button" value="베일레이어">
+                <input type="button" value="버블마스크">
+                <input type="button" value="안티에이징">
+                <input type="button" value="진정">
+                <input type="button" value="이벤트">
+              </div>
+              <h3>최근 검색어</h3>
             </div>
-            <div class="r_word">
-              <h3>추천검색어</h3>
-              <input type="button" value="트러블">
-              <input type="button" value="아이크림">
-              <input type="button" value="매트 립">
-              <input type="button" value="치크">
-              <input type="button" value="세럼">
-              <input type="button" value="폼클렌징">
-              <input type="button" value="립밤">
-              <input type="button" value="프리즈매틱">
-              <input type="button" value="베일레이어">
-              <input type="button" value="버블마스크">
-              <input type="button" value="안티에이징">
-              <input type="button" value="진정">
-              <input type="button" value="이벤트">
-            </div>
-            <h3>최근 검색어</h3>
           </div>
-          
         </div>
 
         <div class="h_bottom">
@@ -244,6 +245,18 @@
             <li><img src="./images/event_tab04.jpg" alt="썸네일" class="small"></li>
           </ul>
         </article>
+        <ul class="pay_event">
+          <li>
+            <a href="#" title="이벤트 상세보기">
+              <img src="./images/pay_event01.png" alt="결제혜택">
+            </a>
+          </li>
+          <li>
+            <a href="#" title="이벤트 상세보기">
+              <img src="./images/pay_event02.png" alt="결제혜택">
+            </a>
+          </li>
+        </ul>
       </section>
 
       <!-- 네번째 New 콘텐츠 -->
@@ -447,9 +460,6 @@
         $('i').removeClass('gnb_act');
         $(this).find('i').addClass('gnb_act');
       });
-
-
-
 
     });
 

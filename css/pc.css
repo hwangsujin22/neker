@@ -2,7 +2,222 @@
 
 @media screen and (min-width:1025px){
 
+  /* 헤더영역 서식 시작 -------------------------------------------------------------- */
+  header{height:160px;}
+  header h1{
+    margin:0px;
+    padding-left:5%;
+    padding-top:26px;
+  }
+  header h1 img{
+    width:134px;
+  }
+  .h_top{
+    width:1200px;height:110px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+  }
 
+  /* 모바일용, 태블릿용 버튼 감추기 */
+  .total_btn, .search_btn, .cart_btn, .gnb1{display:none;}
+
+  .lnb{
+    display:flex;
+    justify-content:space-between;
+  }
+  .lnb > li{
+    padding:40px 20px 0px ;
+  }
+  .lnb > li a{
+    font-size:1rem;
+    display:block;
+    line-height:30px;
+  }
+  .search_btn2 i.fa-search{
+    font-size:30px;
+  }
+
+  /* 검색폼 */
+  .search_bg{
+    background:rgba(0,0,0,.6);
+    right:0px;
+    display:none;
+    transition:0.5s;
+  }
+  .search_box_wrap{
+    width:600px;
+    position:absolute;
+    top:50%; left:50%;
+    transform:translate(-50%, -50%);
+    background:#FFD0D0;
+    border-radius:15px;
+  }
+  .search_box_wrap > h3{
+    height:100px;
+    padding:20px 40px;
+  }
+  .search_box{padding:30px 0px;}
+  .search_box i.fa-arrow-left{left:40px; line-height:58px;}
+  #search_b{
+    margin-top:10px;
+    margin-left:40px;
+  }
+  fieldset > label.fa-search{transform:translate(-45px, 8px);}
+
+  /* 추천검색어 서식 */
+  .r_word{padding:20px 40px;}
+
+  #search:checked + header > .h_top > .search_bg{
+    display:block;
+  }
+
+
+  /* h_bottom 서식 시작 */
+  .gnb2{
+    position:static;
+    width:1200px;
+    background:none;
+    margin:0 auto;
+  }
+  .gnb2 > ul{
+    padding:0px;
+    display:flex;
+    justify-content:space-around;
+  }
+  .gnb2 > ul > li{
+    font-size:1.1rem;
+    line-height:300%;
+  }
+  .gnb2 > img, i.fa-times, .gnb2 > ul > li .fa-angle-down{display:none;}
   
+  /* 메인 영역 서식 시작 ---------------------------------------------------- */
+  section{padding-top:80px;}
+  article{margin-top:50px;}
+  h2{
+    font-size:2rem;
+    text-align:center;
+    padding:30px 0px !important;
+  }
+
+  .best > input, .event > input, .new > input{top:140px; right:0px;}
+
+  /* 메인 슬라이드 영역 서식 */
+  .slide{height:max-content;}
+  .slide > li > a > img{width:100%;height:100%;}
+  .slide > li:first-child > a > img{
+    transform:scale(1) translate(0px);
+  }
+  .slide > li:nth-child(2) > a > img{
+    transform:scale(1) translate(0px);
+  }
+  .slide > li:last-child > a > img{
+    transform:scale(1) translate(0px);
+  }
+  .slide > li:nth-child(2) div{
+    display:none;
+  }
+
+  /* 두번째 best 콘텐츠 서식 */
+  .best{
+    width:1200px;
+    margin:0 auto;
+  }
+  .best_list{
+    display:flex;
+    justify-content:space-around;
+  }
+  .best_list > li{
+    padding:50px 0px;
+  }
+  .best_list > li:last-child{display:block;}
+  .best_list > li img{
+    width:200px;
+  }
+  .best_list > li a{
+    display:block;
+  }
+  .no_n{
+    font-size:1.3rem;
+    line-height:15px;
+  }
+  .item_info > p, .new_list a p{
+    padding:8px 0px;
+    font-size:1.1rem;
+    font-weight:500;
+  }
+  .item_info > p{
+    width:200px;
+    display:inline-block;
+  }
+  .item_info > p:last-child, .new_list a .price{
+    font-size:1.3rem;
+    font-weight:bold;
+  }
+  .item_info > .sale_before{font-size:1rem;}
+  .off{font-size:1.4rem;}
+
+  /* 세번째 Event 콘텐츠 서식 */
+  .event{
+    width:1200px;
+    margin:0 auto;
+  }
+  #big_img{width:100%; height:100%;}
+  .event_tab{display:flex;}
+  .event_tab a{width:81%;}
+  .event_tab > ul{
+    display:block;
+    width:20%;
+    padding-top:1px;
+  }
+  .event_tab > ul > li > img{
+    width:100%;
+  }
+  .event_tab > ul > li:last-child{display:block;}
+  .event_tab{
+    width:65%;
+    margin:40px auto;
+  }
+  .pay_event{display:flex;}
+  .pay_event li{
+    width:50%;
+    padding:0px 1%;
+  }
+
+  .pay_event li img{
+    border-radius:10px;
+  }
+
+  /* 네번째 New 서식 */
+  .new{
+    background:#FFD0D0;
+  }
+  .new > input{
+    right:50%;
+    transform:translateX(590px);
+  }
+  .new > article{
+    width:1200px;
+    margin:40px auto;
+  }
+  .new_list{padding-bottom:50px;}
+  .new_list li{
+    padding:0px 10px 10px 10px;
+  }
+  .new_list a p{
+    width:220px;
+  }
+  .new_list a img{
+    width:230px;
+  }
+  .new_list > li:nth-child(5),
+  .new_list > li:nth-child(6),
+  .new_list > li:nth-child(7),
+  .new_list > li:last-child{display:block;}
+
+
+
+
+
 
 }
