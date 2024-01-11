@@ -177,7 +177,6 @@ fieldset > label.fa-search{
   margin:0 auto;
   position:relative;
   overflow:hidden;
-  border:2px solid #f00;
   box-sizing:border-box;
 }
 .slide_wrapper > h2{display:none;}
@@ -523,6 +522,17 @@ fieldset > label.fa-search{
 .mem_list > li > .fas{
   font-size:2rem;
   padding-top:10px;
+}
+.mem_list > li:hover > i.fas, .mem_list > li:hover > p{transition:0.5s;}
+.mem_list > li:first-child > div{padding-top:60px;}
+.mem_list > li:nth-child(2) > div{padding-top:40px;}
+.mem_list > li:last-child > div{padding-top:20px;}
+.mem_list > li > div{
+  opacity:0;
+}
+.mem_list > li > div > p{
+  font-weight:500;
+  font-size:1.1rem;
 }
 @media screen and (min-width:480px) and (max-width:690px) {
   .mem_list > li{

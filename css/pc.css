@@ -204,20 +204,69 @@
   .new_list li{
     padding:0px 10px 10px 10px;
   }
-  .new_list a p{
-    width:220px;
-  }
-  .new_list a img{
-    width:230px;
-  }
+  .new_list a p{width:220px;}
+  .new_list a img{width:230px;}
   .new_list > li:nth-child(5),
   .new_list > li:nth-child(6),
   .new_list > li:nth-child(7),
   .new_list > li:last-child{display:block;}
 
+  /* 다섯번째 Membership 서식 */
+  .membership{
+    width:1200px;
+    margin:0 auto;
+    padding-bottom:30px;
+  }
+  .membership > h2{line-height:50px;}
+  .membership > h2::after{width:220px;}
+  .membership > p{font-size:1.3rem;}
+  .mem_list{
+    justify-content:center;
+  }
+  .mem_list > li{
+    width:220px; height:220px;
+    margin:0px 30px;
+    transition:0.5s;
+  }
+  .mem_list > li:hover{
+    height:400px;
+    border-radius:150px;
+  }
+  .mem_list > li:hover > i.fas, .mem_list > li:hover > p{
+    color:#FF3535;
+  }
+  .mem_list > li:hover > div{
+    opacity:1;
+    transition:1s;
+  }
+  .mem_list > li > .fas{
+    font-size:3.5rem;
+    padding-top:55px;
+  }
 
-
-
+  /* 푸터영역 서식 시작--------------------------------------------------------------------- */
+  footer{
+    display:flex;
+    flex-direction:row-reverse;
+    border-top:1px solid #333;
+    justify-content:center;
+    padding:20px;
+  }
+  .f_top{
+    width:500px;
+    border:none;
+  }
+  address{
+    width:700px;
+  }
+  .f_top > dl, address{
+    font-size:0.9rem;
+    line-height:20px;
+  }
+  .f_top > dl > dd:first-of-type{
+    font-size:1.2rem;
+    font-weight:bold;
+  }
 
 
 }

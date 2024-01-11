@@ -7,13 +7,13 @@
 *{scroll-behavior:smooth;}
 body{
   color:#333;
-  font-family:'Noto Sans KR', 'Montserrat', sans-serif;
+  font-family:'Noto Sans KR', 'Montserrat', '맑은 고딕';
   overflow-X:hidden;
 }
 
 a{
   color:#333;
-  font-family:'Noto Sans KR', 'Montserrat', sans-serif;
+  font-family:'Noto Sans KR', 'Montserrat', '맑은 고딕';
   text-decoration:none;
 }
 input{

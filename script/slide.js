@@ -69,6 +69,11 @@ for(let i=0;i<s_img.length;i++){
       s_img[j].style.border='3px solid rgba(0,0,0,.0)';
       this.style.border='3px solid #FF3535';
     }
+
+    // PC 해상도의 경우 gnb2 아코디언 효과 없애기
+
+
+    
   });
 }
 
