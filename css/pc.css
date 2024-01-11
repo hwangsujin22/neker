@@ -22,6 +22,7 @@
   /* 모바일용, 태블릿용 버튼 감추기 */
   .total_btn, .search_btn, .cart_btn, .gnb1{display:none;}
 
+  /* h_top 서식 */
   .lnb{
     display:flex;
     justify-content:space-between;
@@ -58,11 +59,7 @@
     padding:20px 40px;
   }
   .search_box{padding:30px 0px;}
-  .search_box i.fa-arrow-left{left:40px; line-height:58px;}
-  #search_b{
-    margin-top:10px;
-    margin-left:40px;
-  }
+  .search_box i.fa-arrow-left{left:40px;}
   fieldset > label.fa-search{transform:translate(-45px, 8px);}
 
   /* 추천검색어 서식 */
@@ -72,8 +69,7 @@
     display:block;
   }
 
-
-  /* h_bottom 서식 시작 */
+  /* h_bottom 서식 */
   .gnb2{
     position:static;
     width:1200px;
@@ -83,13 +79,25 @@
   .gnb2 > ul{
     padding:0px;
     display:flex;
-    justify-content:space-around;
+    justify-content:center;
   }
   .gnb2 > ul > li{
+    text-align:center;
     font-size:1.1rem;
-    line-height:300%;
+    padding:0px 20px;
+    text-indent:0;
   }
   .gnb2 > img, i.fa-times, .gnb2 > ul > li .fa-angle-down{display:none;}
+
+  /* sub메뉴 서식 */
+  .sub{
+    position:relative;
+    display:block;
+    z-index:9999;
+  }
+  .sub > li{
+    text-indent:0px;
+  }
   
   /* 메인 영역 서식 시작 ---------------------------------------------------- */
   section{padding-top:80px;}

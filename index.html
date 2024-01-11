@@ -467,14 +467,39 @@
       });
 
       // 토글의 gnb2 메인 메뉴 클릭시 서브메뉴 나오게 하기------------------------------
+
+      // 윈도우창의 너비값 = $(window).width(); or $(window).height();
+      // $(window).innerWidth(); 패딩값을 포함한 너비
       const g_mu = $('.gnb2 > ul > li > a');
 
-      g_mu.click(function(){
-        $('.sub').slideUp();
-        $(this).next().slideDown();
-        $('i').removeClass('gnb_act');
-        $(this).find('i').addClass('gnb_act');
-      });
+      let w_width;
+
+      // 브라우저의 크기가 변하면 함수내용을 실행한다.
+      $(window).resize(function(){
+
+        w_width = $(window).innerWidth();
+
+        if(w_width<=1024){
+          g_mu.click(function(){
+            $('.sub').slideUp();
+            $(this).next().slideDown();
+            $('i').removeClass('gnb_act');
+            $(this).find('i').addClass('gnb_act');
+          });
+        }
+      }).resize();
+
+      w_width = $(window).innerWidth();
+
+        if(w_width<=1024){
+          g_mu.click(function(){
+            $('.sub').slideUp();
+            $(this).next().slideDown();
+            $('i').removeClass('gnb_act');
+            $(this).find('i').addClass('gnb_act');
+          });
+        }
+
 
     });
 

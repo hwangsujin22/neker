@@ -127,11 +127,12 @@ header h1 img{
   padding-top:60px;
   border-bottom:1px solid #333;
 }
+.search_box{padding:30px 0px;}
 .search_box i.fa-arrow-left{
   font-size:1.6rem;
   position:absolute;
   left:10px;
-  line-height:38px;
+  line-height:58px;
 }
 .search_box > fieldset{
   text-align:center;
@@ -140,14 +141,17 @@ header h1 img{
   width:62.5%; height:38px;
   border:1px solid #333;
   border-radius:50px;
+  margin-top:10px;
+  margin-left:40px;
 }
+
 fieldset > label.fa-search{
   font-size:1.5rem;
-  transform:translate(-45px, 4px);
+  transform:translate(-45px, 8px);
 }
 /* 추천 검색어 서식 */
 .r_word{
-  height:140px;
+  height:200px;
   padding:10px;
   line-height: 35px;
 }
