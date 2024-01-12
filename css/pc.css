@@ -110,7 +110,7 @@
 
   .best > input, .event > input, .new > input{top:140px; right:0px;}
 
-  /* 메인 슬라이드 영역 서식 */
+  /* 첫번째 메인 슬라이드 영역 서식 */
   .slide{height:max-content;}
   .slide > li > a > img{width:100%;height:100%;}
   .slide > li:first-child > a > img{
@@ -141,13 +141,22 @@
   .best_list > li:last-child{display:block;}
   .best_list > li img{
     width:200px;
+    transition:0.5s;
   }
   .best_list > li a{
     display:block;
   }
+  .best_list > li a div:first-child{
+    width:200px; height:200px;
+    overflow:hidden;
+  }
+  .best_list > li a div:first-child:hover > img{
+    transform:scale(1.2);
+  }
   .no_n{
     font-size:1.3rem;
     line-height:15px;
+    z-index:100;
   }
   .item_info > p, .new_list a p{
     padding:8px 0px;
@@ -213,7 +222,14 @@
     padding:0px 10px 10px 10px;
   }
   .new_list a p{width:220px;}
-  .new_list a img{width:230px;}
+  .new_list a img{
+    width:230px;height:230px;
+    transition:0.5s;
+    overflow:hidden;
+  }
+  .new_list a img:hover{
+    /* transform:rotate(360deg); */
+  }
   .new_list > li:nth-child(5),
   .new_list > li:nth-child(6),
   .new_list > li:nth-child(7),
@@ -230,6 +246,8 @@
   .membership > p{font-size:1.3rem;}
   .mem_list{
     justify-content:center;
+    height:370px;
+    padding-top:50px;
   }
   .mem_list > li{
     width:220px; height:220px;
@@ -237,7 +255,7 @@
     transition:0.5s;
   }
   .mem_list > li:hover{
-    height:400px;
+    height:370px;
     border-radius:150px;
   }
   .mem_list > li:hover > i.fas, .mem_list > li:hover > p{
