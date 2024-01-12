@@ -127,16 +127,27 @@
   }
 
   /* 두번째 best 콘텐츠 서식 */
-  .best{
-    width:1200px;
-    margin:0 auto;
+  .best{margin:0 auto;}
+  .best > input{
+    right:50%;
+    transform:translateX(590px);
+  }
+  .best > article{
+    background:url(../images/bg01.jpg);
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
   }
   .best_list{
+    margin:0 auto;
+    width:1200px;
     display:flex;
     justify-content:space-around;
+
   }
   .best_list > li{
     padding:50px 0px;
+    background:#fff;
+    padding:20px;
   }
   .best_list > li:last-child{display:block;}
   .best_list > li img{
@@ -195,7 +206,10 @@
     width:65%;
     margin:40px auto;
   }
-  .pay_event{display:flex;}
+  .pay_event{
+    display:flex;
+    margin-bottom:20px;
+  }
   .pay_event li{
     width:50%;
     padding:0px 1%;
@@ -207,7 +221,7 @@
 
   /* 네번째 New 서식 */
   .new{
-    background:#FFD0D0;
+    background:url(../images/bg03.png);
   }
   .new > input{
     right:50%;
