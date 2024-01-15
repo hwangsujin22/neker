@@ -70,6 +70,9 @@
   }
 
   /* h_bottom 서식 */
+  .h_bottom{
+    /* overflow:hidden; */
+  }
   .gnb2{
     position:static;
     width:1200px;
@@ -94,6 +97,7 @@
     position:relative;
     display:block;
     z-index:9999;
+    background:#FFD0D0;
   }
   .sub > li{
     text-indent:0px;

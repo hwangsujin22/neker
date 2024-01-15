@@ -16,8 +16,6 @@
   <link href="./css/tablet.css" rel="stylesheet" type="text/css">
   <!-- 6. pc 서식 -->
   <link href="./css/pc.css" rel="stylesheet" type="text/css">
-  <!-- 메인 슬라이드 스크립트 -->
-  <script src="./script/slide.js" defer></script>
   <!-- 아이콘폰트 주소 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <!-- 파비콘 이미지 삽입하기 -->
@@ -80,7 +78,7 @@
             </div>
           </div>
         </div>
-
+        <!-- h_bottom -->
         <div class="h_bottom">
           <ul class="gnb1">
             <li>
@@ -435,6 +433,8 @@
     </footer>
   </form>
 
+  <!-- 메인 슬라이드 스크립트 -->
+  <script src="./script/slide.js" defer></script>
   <!-- 제이쿼리 라이브러리 연결 -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
   <script>
@@ -501,6 +501,14 @@
             $(this).find('i').addClass('gnb_act');
           });
         }
+
+      // PC버전에서 마우스 오버시 gnb2 서브메뉴 노출----------------------------------------
+
+      // if(w_width>=1025){
+      //   $('.gnb2').mouseenter(function(){
+      //     $('#h_bottom').stop().animate({'height':'310px'},500);
+      //   });
+      // }
 
 
     });

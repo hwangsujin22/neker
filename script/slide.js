@@ -19,9 +19,6 @@ slide.style.width = (img_w+m)*img_n-m+'%';
 // 왼쪽으로 움직이는 슬라이드 함수 작성하기
 function mslide(n){
   slide.style.left = (img_w+m)*-n+'%';
-  count=n;
-  console.log(count); //이전버튼 클릭시 2, 1, 0순으로 나오게
-  console.log(slide.style.left);
 }
 
 // 3초마다 자동으로 슬라이드 움직이게 하기
@@ -39,9 +36,21 @@ let Timer = setInterval(function(){
 
 // 페이지네이션
 // classList.add, classList.remove 
-// const page_btn = $('.slide_wrapper div span'); //컨트롤 버튼
-// const page_qty = page_btn.length;
-// let n = 0;
+
+let page_n = document.querySelectorAll('.page_n'); //컨트롤 버튼
+// let page_qty = page_btn.length;
+
+for(let a=0;a<page_n.length;a++){
+  page_n[a].addEventListener('click', class_act);
+}
+
+function class_act(){
+  for(let b=0;b<page_n.length;b++){
+    page_n[b].classList.remove('act');
+    this.classList.add('act');
+  }
+}
+
 
 
 

@@ -233,7 +233,7 @@ fieldset > label.fa-search{
   background:#fff;
   margin:0px 5px;
 }
-.act{background:#FFA9A9;}
+.act{background:#FFA9A9 !important;}
 
 
 @media screen and (min-width:380px) and (max-width:400px) {
