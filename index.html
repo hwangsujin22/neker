@@ -16,6 +16,8 @@
   <link href="./css/tablet.css" rel="stylesheet" type="text/css">
   <!-- 6. pc 서식 -->
   <link href="./css/pc.css" rel="stylesheet" type="text/css">
+  <!-- 메인 슬라이드 스크립트 -->
+  <script src="./script/slide.js" defer></script>
   <!-- 아이콘폰트 주소 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <!-- 파비콘 이미지 삽입하기 -->
@@ -433,8 +435,7 @@
     </footer>
   </form>
 
-  <!-- 메인 슬라이드 스크립트 -->
-  <script src="./script/slide.js" defer></script>
+
   <!-- 제이쿼리 라이브러리 연결 -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
   <script>
@@ -504,13 +505,48 @@
 
       // PC버전에서 마우스 오버시 gnb2 서브메뉴 노출----------------------------------------
 
-      // if(w_width>=1025){
-      //   $('.gnb2').mouseenter(function(){
-      //     $('#h_bottom').stop().animate({'height':'310px'},500);
-      //   });
-      // }
+      $(window).resize(function(){
+        w_width = $(window).innerWidth();
+        if(w_width>=1025){
+          $('.gnb2').mouseenter(function(){
+            $('#h_bottom').stop().animate({'height':'310px'},500);
+          });
+        }
+      }).resize();
 
+      let p_gnb = $('.gnb2 > ul > li > a');
+      let p_sub = $('.gnb2 > ul .sub > li > a');
 
+      $(window).resize(function(){
+        w_width = $(window).innerWidth();
+        if(w_width>=1025){
+          p_gnb.each(function(){ //메뉴 5개 각각 개별적으로 기능(클릭)을 삽입한다.
+            $(this).mouseenter(function(){
+              // 현재 선택한 a태그에 서식을 적용하고 그 외 부모의 형제 에서 a태그를 찾아 서식을 제거한다.
+              $(this).css('color', '#FF3535'); //.parent().siblings().find('a').css('color','#333');
+              // parent(부모는 li), siblings(형제는 부모 li의 자식들)
+
+              // 새로고침 방지하여 페이지가 위로 올라가지 못하게 함.
+              return false;
+            });
+            $(this).mouseleave(function(){
+              $(this).css('color', '#333');
+              return false;
+            });
+          });
+
+          p_sub.each(function(){
+            $(this).mouseenter(function(){
+              $(this).css('color', '#FF3535').css('text-decoration', 'underline').css('font-weight', '500');
+              return false;
+            });
+            $(this).mouseleave(function(){
+              $(this).css('color', '#333').css('text-decoration', 'none').css('font-weight', 'normal');
+              return false;
+            });
+          });
+        }
+      }).resize();
     });
 
 
