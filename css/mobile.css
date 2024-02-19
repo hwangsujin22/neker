@@ -5,6 +5,7 @@ input[type="checkbox"]{
   display:none;
 }
 header{
+  position:relative;
   height:96px;
   z-index:9999;
 }

@@ -29,6 +29,7 @@ function mslide(n){
 // 3초마다 자동으로 슬라이드 움직이게 하기
 // 시간객체 = setInterval (함수명, 반복시간)
 
+
 let Timer = setInterval(function(){
   console.log('반복호출실행');
   if(count==2){
@@ -49,6 +50,19 @@ page_n.forEach((el, index) => {
   el.onclick = () => {
     console.log(index);
     mslide(index);
+    clearInterval(Timer);
+  }
+  el.onmouseout = () => {
+    clearInterval(Timer);
+    Timer = setInterval(function(){
+      console.log('반복호출실행');
+      if(count==2){
+        count=0;
+      }else{
+        count++;
+      }
+      mslide(count); //mslide에 count값을 넘겨서 자동으로 움직이게 한다.
+    }, 3000);
   }
 });
 
@@ -56,12 +70,12 @@ page_n.forEach((el, index) => {
 //   page_n[a].addEventListener('click', class_act);
 // }
 
-function class_act(){
-  for(let b=0;b<page_n.length;b++){
-    page_n[b].classList.remove('act');
-    this.classList.add('act');
-  }
-}
+// function class_act(){
+//   for(let b=0;b<page_n.length;b++){
+//     page_n[b].classList.remove('act');
+//     this.classList.add('act');
+//   }
+// }
 
 
 

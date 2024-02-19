@@ -2,15 +2,14 @@
 
 /* 공통 서식 */
 
-h2{
-  font-size:1.3rem;
-}
+h2{font-size:1.3rem;}
 
 input[type="button"]{
   background:#fff;
   border:1px solid #333;
   font-size:0.8rem;
   padding:4px 10px;
+  transition:0.3s;
 }
 
 /* 2, 3, 4번째 콘텐츠 제목, 버튼 공통 서식 */
@@ -40,7 +39,4 @@ input[type="button"]{
   z-index:8000;
 }
 /* top버튼에 적용할 서식 */
-.act{
-  opacity:1;
-  visibility:visible !important;
-}
+.act{opacity:1; visibility:visible !important;}
