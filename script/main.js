@@ -83,5 +83,44 @@ $(document).ready(function(){
     }
   }).resize();
 
+  // 핫 키워드 순서 움직이기 ---------------------------------------------
+  setInterval(function(){
+    let keyword_img = $('.keyword_img > ul');
+    let boxrow = $('.keyword_img > ul > li:first');
+
+    let ARea = ()=> {
+      boxrow.appendTo(keyword_img).show(300);
+    }
+
+    boxrow.hide(300, ARea);
+  },4000);
+
+  let key_text = $('.keyword_text > ul > li');
+  let i = 0;
+
+  function ani(){
+    key_text.removeClass('key_act');
+    if(i==5){
+      i=0;
+    }else{
+      i++;
+    }
+    key_text.eq(i).stop().addClass('key_act');
+  }
+  let Timer2 = setInterval(ani,4000);
+
+
+  // 이벤트 탭 콘텐츠 -----------------------------------------------------------------
+  let e_tab = $('.event_tab li > a');
+
+  e_tab.click(function(){
+
+    $(this).next().show().parent().siblings().find('div').hide();
+    $(this).addClass('tab_act').parent().siblings().find('a').removeClass('tab_act');
+
+    return false;
+  });
+
+
 
 });

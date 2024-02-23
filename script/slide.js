@@ -31,7 +31,6 @@ function mslide(n){
 
 
 let Timer = setInterval(function(){
-  console.log('반복호출실행');
   if(count==2){
     count=0;
   }else{
@@ -65,48 +64,3 @@ page_n.forEach((el, index) => {
     }, 3000);
   }
 });
-
-// for(let a=0;a<page_n.length;a++){
-//   page_n[a].addEventListener('click', class_act);
-// }
-
-// function class_act(){
-//   for(let b=0;b<page_n.length;b++){
-//     page_n[b].classList.remove('act');
-//     this.classList.add('act');
-//   }
-// }
-
-
-
-
-// 메인 세번째 Event 탭 콘텐츠 스크립트------------------------------------------------
-
-// 큰사진 변경하기 위한 변수
-let b_img = document.getElementById('big_img');
-
-// 작은 썸네일 사진 변수로 저장하기
-let s_img = document.querySelectorAll('.small');
-
-// 반복문을 통해 목록(li)안에 있는 img를 개별적으로 선택하여 각각 '클릭이벤트'를 만든다.
-
-for(let i=0;i<s_img.length;i++){
-  console.log(s_img[i]);
-  s_img[i].addEventListener('click', function(){
-    // window.alert('클릭이벤트');
-    let src = this.src; //사용자가 선택한 이미지의 src값을 가져와서 변수에 담는다.
-    console.log(src);
-
-    // src변수값을 b_img의 src속성값에 대입하여 이미지가 변경되도록 한다.
-    b_img.setAttribute('src', src);
-
-    for(let j=0;j<s_img.length;j++){
-      s_img[j].style.border='3px solid rgba(0,0,0,.0)';
-      this.style.border='3px solid #FF3535';
-    }
-
-    
-  });
-}
-
-
