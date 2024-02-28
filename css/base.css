@@ -20,6 +20,7 @@ a{
 }
 input{
   outline: none;
+  font-family:'Noto Sans KR', 'Montserrat', '맑은 고딕';
 }
 ul, dt{
   list-style:none;

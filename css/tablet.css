@@ -11,6 +11,13 @@
   h2{font-size:1.4rem;}
   .best > input, .event > input, .new > input{top:66px;}
 
+  /* 인트로 모달창 서식 */
+  .modal_img{width:45%;}
+
+  @media screen and (min-width:900px) {
+    .modal_img{width:40%;}
+  }
+
   /* 헤더영역 서식 시작---------------------------------------------------- */
   header{height:160px;}
   header h1{margin:0px;padding-left:5%;padding-top:26px;}

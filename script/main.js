@@ -13,6 +13,44 @@ $(document).ready(function(){
     alert('현재 준비 중인 페이지입니다.')
     return false;
   });
+
+  // 메인페이지 모달 띄우기 --------------------------------------------------------------
+  let popup = `
+    <div class="intro_modal">
+      <div class="modal_img">
+        <a href="" title="">
+          <img src="./images/intro_modal.png" alt="광고">
+        </a>
+        <div class="modal_bottom">
+          <input type="checkbox" id="ch">
+          <label for="ch">오늘 하루 열지 않음</label>
+          <input type="button" value="닫기" id="c_btn">
+        </div>
+      </div>
+    </div>
+    `;
+  $('body').append(popup);
+
+  // 현재 브라우저에 쿠기 popup(이름 임의지정)의 값이 none이면 팝업을 나오지 않게 한다.
+  if($.cookie('popup')=='none'){
+    $('.intro_modal').hide();
+  }
+
+  // 체크박스 변수
+  let $ex =$('.intro_modal #ch');
+
+  // 체크박스에 사용자가 체크를 했는지 안했는지 확인하기 위한 함수를 작성
+  function closePopup(){
+    if($ex.is(':checked')){ //체크박스에 체크되었다면
+      $.cookie('popup','none',{expires:1, path:'/'});
+    }
+    $('.intro_modal').hide(); //쿠기를 생성하고 종료한다.
+  }
+
+  // 닫기 버튼 클릭시 해당함수를 호출하여 모달윈도우 닫기
+  $('.intro_modal #c_btn').click(function(){
+    closePopup();
+  });
       
   // gnb1 클릭시 해당 메뉴의 폰트 컬러 변경하기----------------------------------
   let mnu = $('.gnb1 > li > a');

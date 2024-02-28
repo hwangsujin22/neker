@@ -15,6 +15,16 @@
     justify-content:space-between;
   }
 
+  /* 인트로 모달창 서식 */
+  .modal_img{width:35%;}
+  
+  @media screen and (min-width:1200px) {
+    .modal_img{width:30%;}
+  }
+  @media screen and (min-width:1500px) {
+    .modal_img{width:375px;}
+  }
+
   /* 모바일용, 태블릿용 버튼 감추기 */
   .total_btn, .search_btn, .cart_btn, .gnb1{display:none;}
 

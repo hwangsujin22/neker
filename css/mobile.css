@@ -2,6 +2,56 @@
 
 /* 헤더 영역 서식 시작 ---------------------------------------------------- */
 input[type="checkbox"]{display:none;}
+
+/* 인트로 모달창 서식 */
+.intro_modal{
+  width:100%;height:100%;
+  position:fixed;top:0px; left:0px;
+  background:rgba(0,0,0,.7);
+  text-align:center;
+  z-index:10001;
+}
+.modal_img{
+  width:90%;
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%, -50%);
+  color:#fff;
+}
+.modal_img a{display:block;}
+.modal_img img{width:100%;}
+.modal_bottom{width:100%;margin-top:5px;}
+.modal_img #ch{
+  position:absolute;
+  bottom:8px;
+  left:10px;
+  display:block;
+  width:15px; height:15px;
+}
+.modal_bottom label{width:70%;line-height:30px;}
+.modal_img #c_btn{
+  width:30%;
+  background:brown;
+  padding:5px;
+  color:#fff;
+  font-weight:500;font-size:1rem;
+  border:none;
+  float:right;
+}
+
+@media screen and (min-width:400px) {
+  .modal_img{width:70%;}
+  .modal_img #ch{left:2px;}
+}
+@media screen and (min-width:550px) {
+  .modal_img{width:60%;}
+  .modal_img #ch{left:7%;}
+}
+@media screen and (min-width:700px) {
+  .modal_img{width:50%;}
+}
+
+/* 헤더 */
 header{position:relative;height:96px;z-index:9999;}
 .h_top{height:60px;} 
 header h1{
