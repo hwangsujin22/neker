@@ -2,7 +2,8 @@
 
 @media screen and (min-width:1025px){
 
-  input[type="button"]:hover{background:#ffd0d0;border:1px solid #ffd0d0;}
+  input[type="button"]:hover{background:#ffd0d0;}
+  .r_word > input[type="button"]:hover{background:#FF3535; color:#fff;}
 
   /* 헤더영역 서식 시작 -------------------------------------------------------------- */
   header{height:160px;}
